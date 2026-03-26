@@ -7,10 +7,6 @@ import samuelvalentini.dao.EventoDAO;
 import samuelvalentini.dao.LocationDAO;
 import samuelvalentini.dao.PartecipazioneDAO;
 import samuelvalentini.dao.PersonaDAO;
-import samuelvalentini.entities.Partecipazione;
-import samuelvalentini.enumeration.StatoPartecipazione;
-
-import java.util.UUID;
 
 public class Application {
     private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("u4d12ex");
@@ -64,11 +60,11 @@ public class Application {
 //      Partecipazione par1 = new Partecipazione(personaDAO.getById(UUID.fromString("cad1652a-025e-425b-a1f5-0809a870548b")), eventoDAO.getById(UUID.fromString("dd838216-1217-4971-a352-641072a269b6")), StatoPartecipazione.DA_COMFERMARE);
         PartecipazioneDAO partecipazioneDAO = new PartecipazioneDAO(entityManager);
 //      partecipazioneDAO.save(par1);
-        Partecipazione par1DaDatabase = partecipazioneDAO.getById(UUID.fromString("2abfe097-8af8-4fb4-b829-23e052aed458"));
-        par1DaDatabase.setStatoPartecipazione(StatoPartecipazione.CONFERMATA);
-        partecipazioneDAO.save(par1DaDatabase);
-//
-        System.out.println(partecipazioneDAO.getById(UUID.fromString("2abfe097-8af8-4fb4-b829-23e052aed458")));
+//        Partecipazione par1DaDatabase = partecipazioneDAO.getById(UUID.fromString("2abfe097-8af8-4fb4-b829-23e052aed458"));
+//        par1DaDatabase.setStatoPartecipazione(StatoPartecipazione.CONFERMATA);
+//        partecipazioneDAO.save(par1DaDatabase);
+////
+//        System.out.println(partecipazioneDAO.getById(UUID.fromString("2abfe097-8af8-4fb4-b829-23e052aed458")));
 
         entityManager.close();
         emf.close();
