@@ -2,11 +2,13 @@ package samuelvalentini.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import samuelvalentini.enumeration.TipoEvento;
 
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "partite_di_calcio")
 public class PartitaDiCalcio extends Evento {
     @Column(name = "squadra_di_casa", nullable = false)
     private String squadraDiCasa;
@@ -85,5 +87,16 @@ public class PartitaDiCalcio extends Evento {
     public void setNumeroGolSquadraOspite(short numeroGolSquadraOspite) {
         this.numeroGolSquadraOspite = numeroGolSquadraOspite;
         setSquadraVincente();
+    }
+
+    @Override
+    public String toString() {
+        return "PartitaDiCalcio{" +
+                "squadraDiCasa='" + squadraDiCasa + '\'' +
+                ", squadraOspite='" + squadraOspite + '\'' +
+                ", squadraVincente='" + squadraVincente + '\'' +
+                ", numeroGolSquadraDiCasa=" + numeroGolSquadraDiCasa +
+                ", numeroGolSquadraOspite=" + numeroGolSquadraOspite +
+                "} " + super.toString();
     }
 }

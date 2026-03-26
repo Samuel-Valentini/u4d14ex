@@ -9,6 +9,7 @@
         <class>samuelvalentini.entities.Partecipazione</class>
         <class>samuelvalentini.entities.Persona</class>
         <class>samuelvalentini.entities.PartitaDiCalcio</class>
+        <class>samuelvalentini.entities.Concerto</class>
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/gestioneeventi"/>
             <property name="jakarta.persistence.jdbc.user" value="postgres"/>
