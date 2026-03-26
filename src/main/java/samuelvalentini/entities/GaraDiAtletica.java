@@ -33,8 +33,8 @@ public class GaraDiAtletica extends Evento {
         return vincitore;
     }
 
-    public void setVincitore(Persona idVincitore) {
-        this.vincitore = idVincitore;
+    public void setVincitore(Persona vincitore) {
+        this.vincitore = vincitore;
     }
 
     public List<Persona> getAtleti() {
