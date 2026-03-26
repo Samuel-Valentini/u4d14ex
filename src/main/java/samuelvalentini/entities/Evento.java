@@ -8,6 +8,7 @@ import java.time.LocalTime;
 import java.util.UUID;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "eventi")
 
 public class Evento {
