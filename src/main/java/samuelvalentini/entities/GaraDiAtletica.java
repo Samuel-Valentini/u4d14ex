@@ -19,14 +19,14 @@ public class GaraDiAtletica extends Evento {
             name = "gare_di_atletica_atleti",
             joinColumns = @JoinColumn(name = "id_evento"),
             inverseJoinColumns = @JoinColumn(name = "id_persona"))
-    private List<Persona> persone = new ArrayList<>();
+    private List<Persona> atleti = new ArrayList<>();
 
     public GaraDiAtletica(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMassimoPartecipanti, Location location, Persona vincitore) {
         super(titolo, dataEvento, descrizione, tipoEvento, numeroMassimoPartecipanti, location);
         this.vincitore = vincitore;
     }
 
-    public GaraDiAtletica() {
+    protected GaraDiAtletica() {
     }
 
     public Persona getVincitore() {
@@ -37,19 +37,19 @@ public class GaraDiAtletica extends Evento {
         this.vincitore = idVincitore;
     }
 
-    public List<Persona> getPersone() {
-        return persone;
+    public List<Persona> getAtleti() {
+        return atleti;
     }
 
-    public void setPersone(List<Persona> persone) {
-        this.persone = persone;
+    public void setAtleti(List<Persona> persone) {
+        this.atleti = persone;
     }
 
     @Override
     public String toString() {
         return "GaraDiAtletica{" +
                 "vincitore=" + vincitore +
-                ", persone=" + persone +
+                ", atleti=" + atleti +
                 "} " + super.toString();
     }
 }
